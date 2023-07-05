@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zoro to MyAnimeList (By Zai)</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <style>
+        body {
+          background-color: black;
+        }
+        ol {
+            font-size: 150%;
+            color: white;
+        }
+        p {
+            font-size: 130%;
+            color: greenyellow;
+        }
+        h1{
+            font-family: 'Courier New';
+            font-size: 300%;
+            color: red;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>
+        Authenticate and Generate Tokens:
+    </h1>
+    <ol>
+        <li>Go to the "Token Manager" page by clicking on the "Token Manager" button in the navigation menu.</li>
+        <li>Click on the "Get Token" button to authenticate with MyAnimeList.</li>
+        <li>You will be redirected to the MyAnimeList website to authorize the app.</li>
+        <li>After authorization, you will be redirected back to the app where you can copy your access token and refresh token.</li>
+    </ol>
+    <p><strong>NOTE:</strong> Remember to save your token and refresh token in a secure place.</p>
+    <h1>
+        Check Token:
+    </h1>
+    <ol>
+        <li>Go to the "Token Manager" page by clicking on the "Token Manager" button in the navigation menu.</li>
+        <li>Click the "Check token" button.</li>
+        <li>A prompt will appear asking you to enter your token.</li>
+        <li>Enter the token and click "OK".</li>
+        <li>Another prompt will appear, indicating whether your token is still valid or has expired.</li>
+    </ol>
+    <h1>
+        Refresh Token:
+    </h1>
+    <ol>
+        <li>Go to the "Token Manager" page by clicking on the "Token Manager" button in the navigation menu.</li>
+        <li>Click the "Refresh token" button.</li>
+        <li>A prompt will appear asking you to enter your refresh token.</li>
+        <li>Enter the refresh token and click "OK".</li>
+        <li>If your refresh token is valid, you will be redirected to a page where you can copy your new token and refresh token.</li>
+    </ol>
+    <p><strong>NOTE:</strong> Remember to save your token and refresh token in a secure place.</p>
+    <h1>
+        Export Watchlist to MyAnimeList:
+    </h1>
+    <ol>
+        <li>Go to the "Zoro to MAL" page by clicking on the "Zoro to MyAnimelist" button in the navigation menu.</li>
+        <li>Enter your MyAnimeList access token in the provided text field.</li>
+        <li>Select a JSON file containing your watchlist data using the file upload field.</li>
+        <li>Click on the "Upload" button to start the export process.</li>
+        <li>The app will display a progress indicator, showing the percentage of the watchlist exported.</li>
+    </ol>
+</body>
+
+</html>

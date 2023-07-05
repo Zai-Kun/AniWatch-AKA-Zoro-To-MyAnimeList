@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zoro to MyAnimeList (By Zai)</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <div class="center">
+    <h1 id="loading" style="color: lightgreen;text-align: center;">0%</h1>
+    <button onclick="UPDATE()">Update Progress</button>
+  </div>
+  <script>
+    function UPDATE() {
+      let xhr = new XMLHttpRequest();
+      
+      xhr.open('POST', window.location.href, false);
+      xhr.send();
+      
+      if (xhr.status === 200) {
+        let response = xhr.responseText;
+        document.getElementById("loading").textContent = response;
+        
+      } else {
+         document.getElementById("loading").textContent = "Error!";
+      }
+
+    }
+  </script>
+</body>
+
+</html>

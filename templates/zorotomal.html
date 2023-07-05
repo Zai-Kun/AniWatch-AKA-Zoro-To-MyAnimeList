@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zoro to MyAnimeList (By Zai)</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+      .submit-btn {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 2%;
+        font-family: 'Courier New';
+        border: 1px solid red; 
+        border-radius: 5px;
+        margin: 10px 0;
+        width: 90%;
+        font-size: 30px;
+        border-color: red;
+        color: white;
+        transition: border-color 0.5s ease, color 0.5s ease
+      }
+
+      .submit-btn:hover {
+        cursor: pointer;
+        border-color: white;
+        color: red;
+      }
+
+      .submit-btn:active {
+        background-color: rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .file-upload-btn {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: 1px solid red; 
+        padding: 10px;
+        border-radius: 5px;
+        border-color: red;
+        color: white;
+        transition: border-color 0.5s ease, color 0.5s ease
+      }
+      .file-upload-btn:hover {
+        cursor: pointer;
+        border-color: white;
+        color: red;
+      }
+      .file-upload-btn::before {
+        content: 'Click me';
+        float: right;
+        margin-left: 10px;
+      }
+      .file-upload-btn:active {
+        background-color: rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .text-input {
+        padding: 10px;
+        font-size: 20px;
+      }
+      input[type="text"] {
+        background-color: rgba(0, 0, 0, 0.5);
+        font-family: 'Courier New';
+        border: 1px solid red; 
+        border-radius: 5px;
+        margin: 10px 0;
+        border-color: red;
+        color: red;
+        transition: border-color 0.5s ease, color 0.5s ease
+      }
+
+      input[type="text"]:hover {
+        border-color: white;
+        color: red;
+      }
+      input[type="file"]::-webkit-file-upload-button {
+        display: none;
+      }
+      form {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      input[type="file"],
+      input[type="text"] {
+        font-size: 20px;
+        width: 90%;
+        box-sizing: border-box;
+      }
+    </style>
+</head>
+
+<body>
+  <div class="center">
+    <h1 style="text-align: center;"><span style="color: #cae962;">Zoro</span> <span style="color: red;">To</span> <span style="color: #2e51a2;">MyAnimeList</span></h1>
+
+    <form method="POST" enctype="multipart/form-data" action="/zorotomal">
+      <input class="text-input" type="text" name="text" placeholder="Enter your MAL token" autocomplete="off" required><br><br>
+      <input class="file-upload-btn" type="file" name="file" required><br><br>
+      <input type="submit" value="Upload" class="submit-btn">
+    </form>
+  </div>
+</body>
+
+</html>

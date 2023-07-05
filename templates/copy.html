@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zoro to MyAnimeList (By Zai)</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <div class="center">
+      <button onclick="copy('access_token')">Copy token</button>
+      <button onclick="copy('refresh_token')">Copy refresh token</button>
+  </div>
+  {{script | safe}}
+</body>
+
+</html>
+
+
+
