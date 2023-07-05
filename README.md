@@ -2,10 +2,6 @@
 
 ---
 
-**You can access the app [here](https://myanimelist.zaieem.repl.co).**
-
----
-
 ### Instructions
 
 #### Authenticate and Generate Tokens
@@ -42,3 +38,7 @@
 3. Select a JSON file containing your watchlist data using the file upload field.
 4. Click on the "Upload" button to start the export process.
 5. The app will display a progress indicator, showing the percentage of the watchlist exported.
+
+---
+
+**You can access the app [here](https://myanimelist.zaieem.repl.co).**
