@@ -1,7 +1,5 @@
 ## Zoro to MyAnimeList
 
-This is a README file for the Zoro to MyAnimeList project.
-
 ### Instructions
 
 #### Authenticate and Generate Tokens
