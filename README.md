@@ -41,14 +41,18 @@
 
 ---
 
-**You can access the app [here](https://myanimelist.zaieem.repl.co).**
+### Watch a demo video of the app [here](https://www.youtube.com/watch?v=rVDM2HufdRo).
 
-### [Demo Video](https://www.youtube.com/watch?v=rVDM2HufdRo)
+---
 
-Screenshots:
+### Screenshots:
 
 ![Home Page](https://raw.githubusercontent.com/Zai-Kun/AniWatch-AKA-Zoro-To-MyAnimeList/main/screenshots/home_page.png)
 ![Zoro To MyAnimeList Page](https://raw.githubusercontent.com/Zai-Kun/AniWatch-AKA-Zoro-To-MyAnimeList/main/screenshots/zoro_to_myanimelist.png)
+
+---
+
+### **You can access the app [here](https://myanimelist.zaieem.repl.co).**
 
 ---
 
