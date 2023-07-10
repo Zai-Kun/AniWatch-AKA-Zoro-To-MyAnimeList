@@ -47,6 +47,6 @@
 
 DISCLAIMER:
 
-The app requires authorization and authentication with MyAnimeList to access and export your watchlist data. Please note that the owner(s) of this repository do not store your access token or refresh token. It is your responsibility to securely store and manage your tokens. If your access token or refresh token is leaked, misused, or compromised, the owner(s) of this repository shall not be held responsible for any issues, loss, or damage arising from such incidents. It is advisable to take necessary precautions to protect your tokens and ensure their confidentiality.
+The app requires authorization and authentication with MyAnimeList to export your watchlist data. Please note that the owner(s) of this repository do not store your access token or refresh token. It is your responsibility to securely store and manage your tokens. If your access token or refresh token is leaked, misused, or compromised, the owner(s) of this repository shall not be held responsible for any issues, loss, or damage arising from such incidents. It is advisable to take necessary precautions to protect your tokens and ensure their confidentiality.
 
 ---
