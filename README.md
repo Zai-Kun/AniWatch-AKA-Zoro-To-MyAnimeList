@@ -41,6 +41,10 @@
 
 ---
 
+### [Demo Video](https://www.youtube.com/watch?v=rVDM2HufdRo)
+
+---
+
 **You can access the app [here](https://myanimelist.zaieem.repl.co).**
 
 ---
