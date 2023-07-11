@@ -1,6 +1,13 @@
 # [AniWatch(Zoro) to MyAnimeList](https://myanimelist.zaieem.repl.co)
 
 ---
+### Demo:
+![Demo](https://raw.githubusercontent.com/Zai-Kun/AniWatch-AKA-Zoro-To-MyAnimeList/main/demo/demo.gif)
+
+
+### Watch the full demo video of the app [here](https://www.youtube.com/watch?v=rVDM2HufdRo).
+
+---
 
 ## How to use the app:
 
@@ -22,8 +29,6 @@
 3. Select a JSON file containing your watchlist data using the file upload field.
 4. Click on the "Upload" button to start the export process.
 5. The app will display a progress indicator, showing the percentage of the watchlist exported.
-
-And you are done!
 
 ### Steps to follow if you already have the MAL tokens:
 
@@ -58,23 +63,8 @@ Once you have a valid access token, you can proceed to export your watchlist fro
 3. Select a JSON file containing your watchlist data using the file upload field.
 4. Click on the "Upload" button to start the export process.
 5. The app will display a progress indicator, showing the percentage of the watchlist exported.
-And you are done!
 
----
-
-### Watch a demo video of the app [here](https://www.youtube.com/watch?v=rVDM2HufdRo).
-
----
-
-### Screenshots:
-
-![Home Page](https://raw.githubusercontent.com/Zai-Kun/AniWatch-AKA-Zoro-To-MyAnimeList/main/screenshots/home_page.png)
-![Zoro To MyAnimeList Page](https://raw.githubusercontent.com/Zai-Kun/AniWatch-AKA-Zoro-To-MyAnimeList/main/screenshots/zoro_to_myanimelist.png)
-
----
-
-### **You can access the app [here](https://myanimelist.zaieem.repl.co).**
-
+Web App: https://myanimelist.zaieem.repl.co
 ---
 
 DISCLAIMER:
