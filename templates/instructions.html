@@ -2,64 +2,94 @@
 <html lang="en">
 
 <head>
-    <title>Zoro to MyAnimeList (By Zai)</title>
+    <title>AniWatch(Zoro) to MyAnimeList</title>
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <style>
         body {
-          background-color: black;
+            background-color: #292929;
+            color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            margin: 20px;
         }
-        ol {
-            font-size: 150%;
-            color: white;
+
+        h1 {
+            color: #f5f5f5;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
+
+        h3 {
+            color: #f5f5f5;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            color: #f5f5f5;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
         p {
-            font-size: 130%;
-            color: greenyellow;
+            color: #cccccc;
+            font-size: 18px;
+            margin-bottom: 10px;
         }
-        h1{
-            font-family: 'Courier New';
-            font-size: 300%;
-            color: red;
+
+        ol {
+            color: #f5f5f5;
+            font-size: 18px;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #b3b3b3;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #666666;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
     </style>
 </head>
 
 <body>
-    <h1>
-        Authenticate and Generate Tokens:
-    </h1>
+    <h1>AniWatch(Zoro) to MyAnimeList</h1>
+    <hr>
+    <h3>Demo:</h3>
+    <img src="https://raw.githubusercontent.com/Zai-Kun/AniWatch-AKA-Zoro-To-MyAnimeList/main/demo/demo.gif" alt="Demo">
+    <h3>Watch the full demo video of the app <a href="https://www.youtube.com/watch?v=rVDM2HufdRo" style="color: #66ccff;">here</a>.</h3>
+    <hr>
+    <h2>How to use the app:</h2>
+    <h3>Steps to follow if you don't have the MAL tokens:</h3>
+    <h4>Authenticate and Generate Tokens:</h4>
     <ol>
         <li>Go to the "Token Manager" page by clicking on the "Token Manager" button in the navigation menu.</li>
         <li>Click on the "Get Token" button to authenticate with MyAnimeList.</li>
         <li>You will be redirected to the MyAnimeList website to authorize the app.</li>
-        <li>After authorization, you will be redirected back to the app where you can copy your access token and refresh token.</li>
+        <li>After authorization, you will be redirected back to the app where you can copy your access token and
+            refresh token.</li>
     </ol>
-    <p><strong>NOTE:</strong> Remember to save your token and refresh token in a secure place.</p>
-    <h1>
-        Check Token:
-    </h1>
-    <ol>
-        <li>Go to the "Token Manager" page by clicking on the "Token Manager" button in the navigation menu.</li>
-        <li>Click the "Check token" button.</li>
-        <li>A prompt will appear asking you to enter your token.</li>
-        <li>Enter the token and click "OK".</li>
-        <li>Another prompt will appear, indicating whether your token is still valid or has expired.</li>
-    </ol>
-    <h1>
-        Refresh Token:
-    </h1>
-    <ol>
-        <li>Go to the "Token Manager" page by clicking on the "Token Manager" button in the navigation menu.</li>
-        <li>Click the "Refresh token" button.</li>
-        <li>A prompt will appear asking you to enter your refresh token.</li>
-        <li>Enter the refresh token and click "OK".</li>
-        <li>If your refresh token is valid, you will be redirected to a page where you can copy your new token and refresh token.</li>
-    </ol>
-    <p><strong>NOTE:</strong> Remember to save your token and refresh token in a secure place.</p>
-    <h1>
-        Export Watchlist to MyAnimeList:
-    </h1>
+    <p><strong style="color: #66ccff;">NOTE:</strong> Remember to save your token and refresh token in a secure place.</p>
+    <h4>Export Watchlist to MyAnimeList:</h4>
     <ol>
         <li>Go to the "Zoro to MAL" page by clicking on the "Zoro to MyAnimelist" button in the navigation menu.</li>
         <li>Enter your MyAnimeList access token in the provided text field.</li>
@@ -67,6 +97,42 @@
         <li>Click on the "Upload" button to start the export process.</li>
         <li>The app will display a progress indicator, showing the percentage of the watchlist exported.</li>
     </ol>
+    <h3>Steps to follow if you already have the MAL tokens:</h3>
+    <h4>Check Token:</h4>
+    <p>If you already have an access token for MyAnimeList, you need to check its validity before proceeding by following these steps:</p>
+    <ol>
+        <li>Go to the "Token Manager" page by clicking on the "Token Manager" button in the navigation menu.</li>
+        <li>Click the "Check token" button.</li>
+        <li>A prompt will appear asking you to enter your token.</li>
+        <li>Enter the token and click "OK".</li>
+        <li>Another prompt will appear, indicating whether your token is still valid or has expired.</li>
+    </ol>
+    <p><strong style="color: #66ccff;">NOTE:</strong> If your access token has expired, you need to refresh it by following the steps in the next section.</p>
+    <h4>Refresh Token (Only follow these steps if your MAL token has expired.):</h4>
+    <ol>
+        <li>Go to the "Token Manager" page by clicking on the "Token Manager" button in the navigation menu.</li>
+        <li>Click the "Refresh token" button.</li>
+        <li>A prompt will appear asking you to enter your refresh token.</li>
+        <li>Enter the refresh token and click "OK".</li>
+        <li>If your refresh token is valid, you will be redirected to a page where you can copy your new token and
+            refresh token.</li>
+    </ol>
+    <p><strong style="color: #66ccff;">NOTE:</strong> Remember to save your token and refresh token in a secure place. Additionally, it's
+        important to refresh your token periodically to ensure uninterrupted access to your MyAnimeList account.</p>
+    <h4>Export Watchlist to MyAnimeList:</h4>
+    <p>Once you have a valid access token, you can proceed to export your watchlist from AniWatch (Zoro) to
+        MyAnimeList by following these steps:</p>
+    <ol>
+        <li>Go to the "Zoro to MAL" page by clicking on the "Zoro to MyAnimelist" button in the navigation menu.</li>
+        <li>Enter your MyAnimeList access token in the provided text field.</li>
+        <li>Select a JSON file containing your watchlist data using the file upload field.</li>
+        <li>Click on the "Upload" button to start the export process.</li>
+        <li>The app will display a progress indicator, showing the percentage of the watchlist exported.</li>
+    </ol>
+    <hr>
+    <p><strong style="color: #66ccff;">DISCLAIMER:</strong></p>
+    <p>Please note that this web app does not store your access token or refresh token. It is your responsibility to
+        securely store and manage your tokens.</p>
 </body>
 
 </html>
