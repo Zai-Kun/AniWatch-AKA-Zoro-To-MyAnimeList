@@ -1,4 +1,4 @@
-# [AniWatch(Zoro) to MyAnimeList](https://myanimelist2.zaieem.repl.co)
+# [AniWatch(Zoro) to MyAnimeList](https://myanimelist.zaieem.repl.co)
 
 ---
 ### Demo:
@@ -64,7 +64,7 @@ Once you have a valid access token, you can proceed to export your watchlist fro
 4. Click on the "Upload" button to start the export process.
 5. The app will display a progress indicator, showing the percentage of the watchlist exported.
 
-Web App: https://myanimelist2.zaieem.repl.co
+Web App: https://myanimelist.zaieem.repl.co
 ---
 
 DISCLAIMER:
