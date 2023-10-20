@@ -183,7 +183,9 @@ def EXPORT_TO_MAL(API_KEY, ID, watchlist_zoro):
             payload = {"status": convert[i]}
 
             if i == 'Completed':
-                payload["num_watched_episodes"] = -1
+                details_url = f"https://api.myanimelist.net/v2/anime/{anime_id}?fields=num_episodes"
+                total_episodes = int((requests.get(url=details_url, headers=headers).json())['num_episodes'])
+                payload["num_watched_episodes"] = total_episodes
 
             response = requests.put(url,
                                     headers=headers,
