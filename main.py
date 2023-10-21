@@ -40,20 +40,21 @@ Export Watchlist to MyAnimeList:
     5. The app will display a progress indicator, showing the percentage of the watchlist exported.
 '''
 
-from flask import Flask, redirect, request, session, render_template, jsonify
-import requests
-import secrets
-import os
-from urllib.parse import urlencode
-import json
-import random
-import string
 import base64
-from threading import Lock, Thread
-from waitress import serve
-import discord
-from discord.ext import tasks
+import json
+import os
 import queue
+import random
+import secrets
+import string
+from threading import Lock, Thread
+from urllib.parse import urlencode
+
+import discord
+import requests
+from discord.ext import tasks
+from flask import Flask, jsonify, redirect, render_template, request, session
+from waitress import serve
 
 client_id = os.getenv("client_id")
 client_secret = os.getenv("client_secret")
