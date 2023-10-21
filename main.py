@@ -183,7 +183,7 @@ def EXPORT_TO_MAL(API_KEY, ID, watchlist_zoro):
             payload = {"status": convert[i]}
 
             if i == 'Completed':
-                payload["num_watched_episodes"] = -1
+                payload["num_watched_episodes"] = 99999
 
             response = requests.put(url,
                                     headers=headers,
