@@ -51,6 +51,7 @@ from threading import Lock, Thread
 from urllib.parse import urlencode
 
 import discord
+import grequests  # must be imported before requests due to use of monkey-patching
 import requests
 from discord.ext import tasks
 from flask import Flask, jsonify, redirect, render_template, request, session
@@ -155,6 +156,38 @@ class PROGRESS_MANAGER:
                 return False
 
 
+def total_eps_count(API_KEY, watchlist_zoro):
+
+    headers = {
+        "Authorization": f"Bearer {API_KEY}",
+        "Content-Type": "application/x-www-form-urlencoded"
+    }
+
+    url = "https://api.myanimelist.net/v2/anime/{}?fields=num_episodes"
+
+    api_call_urls = []
+
+    for i in watchlist_zoro.keys():
+        for j in watchlist_zoro[i]:
+
+            if i == 'Completed':
+                anime_id = j["link"].split("/")[-1]
+                api_call_urls.append(url.format(anime_id))   # append the completed animes' api call url to list
+
+
+    rs =  (grequests.get(a, headers=headers) for a in api_call_urls) # queue the requests to send
+
+    api_answer = grequests.imap(rs, size = 10) # NOTE: Please customize the size (max concurrent connections) accordingly.
+
+    anime_eps_count = {}
+
+    for answer in api_answer:
+        req = answer.json()
+        anime_eps_count[int(req['id'])] = req['num_episodes']
+
+    return anime_eps_count
+
+
 def EXPORT_TO_MAL(API_KEY, ID, watchlist_zoro):
     headers = {
         "Authorization": f"Bearer {API_KEY}",
@@ -172,6 +205,8 @@ def EXPORT_TO_MAL(API_KEY, ID, watchlist_zoro):
     total_anime = 0
     total_anime_added = 0
 
+    anime_eps_count = total_eps_count(API_KEY, watchlist_zoro)
+
     for i in watchlist_zoro.keys():
         total_anime += len(watchlist_zoro[i])
 
@@ -184,7 +219,7 @@ def EXPORT_TO_MAL(API_KEY, ID, watchlist_zoro):
             payload = {"status": convert[i]}
 
             if i == 'Completed':
-                payload["num_watched_episodes"] = -1
+                payload["num_watched_episodes"] = anime_eps_count.get(int(anime_id), 0)
 
             response = requests.put(url,
                                     headers=headers,
