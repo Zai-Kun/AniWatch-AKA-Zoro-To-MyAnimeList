@@ -2,3 +2,4 @@
 *.html linguist-language=HTML
 *.js linguist-language=JavaScript
 *.css linguist-language=CSS
+*.html linguist-detectable=false
