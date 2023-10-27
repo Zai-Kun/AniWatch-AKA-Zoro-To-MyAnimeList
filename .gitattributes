@@ -2,3 +2,5 @@
 *.html linguist-language=HTML
 *.js linguist-language=JavaScript
 *.css linguist-language=CSS
+static/* linguist-vendored
+templates/* linguist-vendored
