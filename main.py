@@ -309,7 +309,7 @@ def MAIN_APP():
     app.register_error_handler(405, not_found)
     app.register_error_handler(404, not_found)
 
-    serve(app, host="0.0.0.0")
+    serve(app, host="0.0.0.0", port=5151)
 
 
 MAIN_APP_THREAD = Thread(target=MAIN_APP, daemon=True)

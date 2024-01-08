@@ -1,0 +1,4 @@
+discord
+waitress
+requests
+flask
