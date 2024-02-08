@@ -4,9 +4,6 @@
 ### Demo:
 ![Demo](https://raw.githubusercontent.com/Zai-Kun/AniWatch-AKA-Zoro-To-MyAnimeList/main/demo/demo.gif)
 
-
-### Watch the full demo video of the app [here](https://www.youtube.com/watch?v=rVDM2HufdRo).
-
 ---
 
 ## How to use the app:
